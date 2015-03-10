@@ -44,6 +44,11 @@ public class CommandParser {
 
 
      public static void main(String[] args) {
-      //  new CommandParser(new A)
+        new CommandParser(new AbstractWordParser[]{new SingleLetterWordParser("q")}, new ICommandExecutor() {
+            @Override
+            public boolean execute(GameContext gameContext, Map<String, Object> paremeter) {
+                return gameContext.stopGame();
+            }
+        });
     }
 }

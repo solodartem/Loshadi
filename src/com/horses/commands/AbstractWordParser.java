@@ -9,10 +9,6 @@ public abstract  class AbstractWordParser {
 
     protected String parameterName;
 
-    public String getParameterName() {
-        return parameterName;
-    };
-
     public boolean parse(Map<String, Object> parameters, String word) {
         return word!=null||word.length()==1;
     }
